@@ -1,0 +1,339 @@
+[
+    {
+        "name":"Home",
+        "roles":["fiestaAdmin","testbedAdmin","experimenterAdmin","authenticated"],
+        "cssClass":"fa fa-dashboard",
+        "submenus": [
+            {
+                "name":"Welcome",
+                "url":"https://platform-dev.fiesta-iot.eu/portalui/welcome",
+                "roles":["fiestaAdmin","testbedAdmin","experimenterAdmin","authenticated"],
+                "cssClass":"fa fa-circle-o"
+            },
+            {
+                "name":"Guide",
+                "url":"https://platform-dev.fiesta-iot.eu/portalui/guide",
+                "roles":["fiestaAdmin","testbedAdmin","experimenterAdmin","authenticated"],
+                "cssClass":"fa fa-circle-o"
+
+            },
+            {
+                "name":"Contact Us",
+                "url":"https://platform-dev.fiesta-iot.eu/portalui/contact",
+                "roles":["fiestaAdmin","testbedAdmin","experimenterAdmin","authenticated"],
+                "cssClass":"fa fa-circle-o"
+
+            },
+            {
+                "name":"Statistic",
+                "url":"https://platform-dev.fiesta-iot.eu/portalui/statistics",
+                "roles":["fiestaAdmin","testbedAdmin","experimenterAdmin","authenticated"],
+                "cssClass":"fa fa-circle-o"
+
+            }
+
+        ]
+    },
+    {
+        "name":"Experimenter",
+        "roles":["fiestaAdmin","experimenterAdmin"],
+        "cssClass":"fa fa-book",
+        "submenus": [
+            {
+                "name":"Experiment Editor",
+                "url":"https://platform-dev.fiesta-iot.eu/expeditor/",
+                "roles":["fiestaAdmin","experimenterAdmin"],
+                "cssClass":"fa fa-circle-o"
+            },
+            {
+                "name":"Experiment Register Client",
+                "url":"https://platform-dev.fiesta-iot.eu/experiment.register.client/index.zul",
+                "roles":["fiestaAdmin","experimenterAdmin"],
+                "cssClass":"fa fa-circle-o"
+
+            },
+            {
+                "name":"Management Console",
+                "url":"https://platform-dev.fiesta-iot.eu/experimentConsole/experimentConsole.jsp",
+                "roles":["fiestaAdmin","experimenterAdmin"],
+                "cssClass":"fa fa-circle-o"
+
+            }
+        ]
+
+    },
+    {
+        "name":"Testbed Provider",
+        "roles":["fiestaAdmin","testbedAdmin"],
+        "cssClass":"fa fa-snowflake-o",
+        "submenus": [
+            {
+                "name":"Register Testbed",
+                "url":"https://platform-dev.fiesta-iot.eu/ui.testbed-registry/#/register-testbeds",
+                "roles":["fiestaAdmin","testbedAdmin"],
+                "cssClass":"fa fa-circle-o"
+            },
+            {
+                "name":"Register Resources",
+                "url":"https://platform-dev.fiesta-iot.eu/ui.testbed-registry/#/register-devices",
+                "roles":["fiestaAdmin","testbedAdmin"],
+                "cssClass":"fa fa-circle-o"
+
+            },
+            {
+                "name":"TPI Configurator",
+                "url":"https://platform-dev.fiesta-iot.eu/tpi.configurator/index.zul",
+                "roles":["fiestaAdmin","testbedAdmin"],
+                "cssClass":"fa fa-circle-o"
+
+            }
+        ]
+    },
+    {
+        "name":"Tools",
+        "roles":["fiestaAdmin","testbedAdmin","experimenterAdmin","authenticated"],
+        "cssClass":"fa fa-cog",
+        "submenus": [
+            {
+                "name":"Testbed Monitoring",
+                "url":"https://platform-dev.fiesta-iot.eu/dashboard/",
+                "roles":["fiestaAdmin","testbedAdmin","experimenterAdmin","authenticated"],
+                "cssClass":"fa fa-circle-o"
+            },
+            {
+                "name":"Certification",
+                "url":"http://certificate.fiesta-iot.eu/#/auth/login",
+                "roles":["fiestaAdmin","testbedAdmin"],
+                "cssClass":"fa fa-circle-o",
+                "target":"_blank"
+
+            },
+
+
+
+            {
+                "name":"FAT",
+                "url":"https://platform-dev.fiesta-iot.eu/portalui/fatDocs",
+                "roles":["fiestaAdmin","experimenterAdmin"],
+                "cssClass":"fa fa-circle-o"
+
+            },
+            {
+                "name": "Reasoning",
+                "roles":["fiestaAdmin","experimenterAdmin"],
+                "cssClass":"fa fa-circle-o",
+                "submenus": [
+                    {
+                        "name":"Create Rule",
+                        "roles":["fiestaAdmin","experimenterAdmin"],
+                        "url":"https://platform-dev.fiesta-iot.eu/reasoner-engine/#/reasoning",
+                        "cssClass":"fa fa-circle-o"
+
+                    },
+                    {
+                        "name":"Register Rule",
+                        "roles":["fiestaAdmin","experimenterAdmin"],
+                        "url":"https://platform-dev.fiesta-iot.eu/reasoner-engine/#/register-rule",
+                        "cssClass":"fa fa-circle-o"
+                    },
+                    {
+                        "name":"Execute Rule",
+                        "roles":["fiestaAdmin","experimenterAdmin"],
+                        "url":"https://platform-dev.fiesta-iot.eu/reasoner-engine/#/execution",
+                        "cssClass":"fa fa-circle-o"
+                    }
+                ]
+
+            }
+        ]
+    },
+    {
+        "name":"Demo",
+        "roles":["fiestaAdmin","testbedAdmin","experimenterAdmin","authenticated"],
+        "cssClass":"fa fa-laptop",
+        "submenus": [
+            {
+                "name":"Sample DEMO Experiment",
+                "url":"http://fiesta-iot.tlmat-unican.es/icsoc-demo/",
+                "roles":["fiestaAdmin","testbedAdmin","experimenterAdmin","authenticated"],
+                "cssClass":"fa fa-circle-o",
+                "target":"_blank"
+            },
+            {
+                "name":"Discovery of IoT Resources",
+                "url":"https://platform-dev.fiesta-iot.eu/portalui/commingSoon",
+                "roles":["fiestaAdmin","testbedAdmin","experimenterAdmin","authenticated"],
+                "cssClass":"fa fa-circle-o"
+
+            },
+            {
+                "name":"Large Scale Crowdsensing",
+                "url":"https://mimove-apps.paris.inria.fr/fiesta/index_fiesta.html",
+                "roles":["fiestaAdmin","testbedAdmin","experimenterAdmin","authenticated"],
+                "cssClass":"fa fa-circle-o",
+                "target":"_blank"
+
+            }
+        ]
+    },
+    {
+        "name":"Help",
+        "roles":["fiestaAdmin","testbedAdmin","experimenterAdmin","authenticated"],
+        "cssClass":"fa fa-question-circle",
+        "submenus": [
+            {
+                "name":"About FIESTA-IoT",
+                "url":"http://fiesta-iot.eu",
+                "roles":["fiestaAdmin","testbedAdmin","experimenterAdmin","authenticated"],
+                "cssClass":"fa fa-circle-o",
+                "target":"_blank"
+            },
+            {
+                "name":"Support",
+                "url":"http://fiesta-iot.eu/index.php/support/",
+                "roles":["fiestaAdmin","testbedAdmin","experimenterAdmin","authenticated"],
+                "cssClass":"fa fa-circle-o",
+                "target":"_blank"
+
+            },
+            {
+                "name":"Documentation",
+                "url":"#",
+                "roles":["fiestaAdmin","testbedAdmin","experimenterAdmin","authenticated"],
+                "cssClass":"fa fa-circle-o",
+                "submenus": [
+                    {
+                        "name":"Moodle",
+                        "url":"http://moodle.fiesta-iot.eu",
+                        "roles":["fiestaAdmin","testbedAdmin","experimenterAdmin","authenticated"],
+                        "cssClass":"fa fa-circle-o",
+                        "target":"_blank"
+
+                    },
+                    {
+                        "name":"Deliverables",
+                        "url":"http://fiesta-iot.eu/index.php/fiesta-project/deliverables/",
+                        "roles":["fiestaAdmin","testbedAdmin","experimenterAdmin","authenticated"],
+                        "cssClass":"fa fa-circle-o",
+                        "target":"_blank"
+
+                    },
+                    {
+                        "name":"EEE API",
+                        "url":"https://platform-dev.fiesta-iot.eu/EEEapidocs/#/",
+                        "roles":["experimenterAdmin"],
+                        "cssClass":"fa fa-circle-o"
+
+                    },
+                    {
+                        "name":"EEE Admin API",
+                        "url":"https://platform-dev.fiesta-iot.eu/EEEapidocsAdmin/#/",
+                        "roles":["fiestaAdmin"],
+                        "cssClass":"fa fa-circle-o"
+
+                    },
+                    {
+                        "name":"IoT Registry API",
+                        "url":"https://platform-dev.fiesta-iot.eu/iot-registry/docs/api.html",
+                        "roles":["fiestaAdmin","testbedAdmin","experimenterAdmin","authenticated"],
+                        "cssClass":"fa fa-circle-o"
+
+                    },
+                    {
+                        "name":"Annotator API",
+                        "url":"",
+                        "roles":["fiestaAdmin","testbedAdmin","authenticated"],
+                        "cssClass":"fa fa-circle-o"
+
+                    },
+                    {
+                        "name":"Testbed & Resource API",
+                        "url":"https://platform-dev.fiesta-iot.eu/ui.testbed-registry/#/docs",
+                        "roles":["fiestaAdmin","testbedAdmin","experimenterAdmin","authenticated"],
+                        "cssClass":"fa fa-circle-o"
+
+                    },
+                    {
+                        "name":"Reasoning API",
+                        "url":"https://platform-dev.fiesta-iot.eu/reasoner-engine/#/docs",
+                        "roles":["fiestaAdmin","testbedAdmin","experimenterAdmin"],
+                        "cssClass":"fa fa-circle-o"
+
+                    },
+
+
+                    {
+                        "name":"Experiment Storage API",
+                        "url":"https://platform-dev.fiesta-iot.eu/portalui/resultStoreDocs",
+                        "roles":["fiestaAdmin","experimenterAdmin"],
+                        "cssClass":"fa fa-circle-o"
+
+                    },
+                    {
+                        "name":"FAT API Doc",
+                        "url":"https://platform-dev.fiesta-iot.eu/portalui/resultStoreDocs",
+                        "roles":["fiestaAdmin","experimenterAdmin"],
+                        "cssClass":"fa fa-circle-o"
+
+                    },
+                    {
+                        "name":"Validation API",
+                        "url":"https://platform-dev.fiesta-iot.eu/portalui/ontologyValidatorDocs",
+                        "roles":["fiestaAdmin","testbedAdmin"],
+                        "cssClass":"fa fa-circle-o"
+
+                    },
+
+
+                    {
+                        "name":"FIESTA-IoT Ontology",
+                        "url":"http://ontology.fiesta-iot.eu/ontologyDocs/fiesta-iot.html",
+                        "roles":["fiestaAdmin","testbedAdmin","experimenterAdmin","authenticated"],
+                        "cssClass":"fa fa-circle-o",
+                        "target":"_blank"
+
+                    },
+                    {
+                        "name":"m3-lite ontology",
+                        "url":"http://ontology.fiesta-iot.eu/ontologyDocs/m3-lite.html",
+                        "roles":["fiestaAdmin","testbedAdmin","experimenterAdmin","authenticated"],
+                        "cssClass":"fa fa-circle-o",
+                        "target":"_blank"
+
+                    }
+
+
+                ]
+
+            },
+            {
+                "name":"Social Media Resources",
+                "roles":["fiestaAdmin","testbedAdmin","experimenterAdmin","authenticated"],
+                "cssClass":"fa fa-circle-o",
+                "submenus":[
+                    {
+                        "name":"Youtube",
+                        "url":"https://www.youtube.com/channel/UCPMOblIYoYh_QlLxukcrzew",
+                        "roles":["fiestaAdmin","testbedAdmin","experimenterAdmin","authenticated"],
+                        "cssClass":"fa fa-youtube-play",
+                        "target":"_blank"
+                    },
+                    {
+                        "name":"Twitter",
+                        "url":"https://twitter.com/fiesta_iot",
+                        "roles":["fiestaAdmin","testbedAdmin","experimenterAdmin","authenticated"],
+                        "cssClass":"fa fa-twitter-square",
+                        "target":"_blank"
+                    },
+                    {
+                        "name":"SlideShare",
+                        "url":"https://www.slideshare.net/fiestaiot",
+                        "roles":["fiestaAdmin","testbedAdmin","experimenterAdmin","authenticated"],
+                        "cssClass":"fa fa-slideshare",
+                        "target":"_blank"
+                    }
+                ]
+            }
+        ]
+    }
+]

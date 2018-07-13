@@ -1,0 +1,76 @@
+# ===================================================================
+# Spring Boot configuration for the "dev" profile.
+#
+# This configuration overrides the application.yml file.
+# ===================================================================
+
+# ===================================================================
+# Standard Spring Boot properties.
+# Full reference is available at:
+# http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+# ===================================================================
+
+
+spring:
+    profiles:
+        active: prod
+        include: swagger,no-liquibase
+    devtools:
+        restart:
+            enabled: true
+        livereload:
+            enabled: false # we use gulp + BrowserSync for livereload
+    jackson:
+        serialization.indent_output: true
+    messages:
+        cache-seconds: 1
+    thymeleaf:
+        cache: false
+        mode: LEGACYHTML5
+
+
+liquibase:
+    contexts: prod
+
+server:
+    port: 8080
+
+# ===================================================================
+# Fiesta specific properties
+# ===================================================================
+
+fiesta:
+    enpoints:
+        iotRegisterResourceUrl: http://localhost:8080/iot-registry/api/resources
+        iotRegisterTestbedUrl: http://localhost:8080/iot-registry/api/testbeds/
+        iotRegisterTextUrl: http://localhost:8080/iot-registry/api/utils/annotator/testbed
+        ontologyValidatrorObservationUrl: http://localhost:8080/ontologyValidator/Observations
+        ontologyValidatorResourceUrl: http://localhost:8080/ontologyValidator/Resources
+        authenticateUrl: https://platform.fiesta-iot.eu/openam/json/authenticate
+        getUserInfoUrl: https://platform.fiesta-iot.eu/openam/json/users/
+        getUserIdUrl: https://platform.fiesta-iot.eu/openam/json/users?_action=idFromSession
+        ontologyM3LiteUrl: http://ontology.fiesta-iot.eu/ontologyDocs/m3-lite.owl
+        platformBaseURL: https://platform.fiesta-iot.eu/
+        executeQueryBaseURL: https://platform.fiesta-iot.eu/
+        redirectLoginToPortal: https://platform.fiesta-iot.eu/openam/XUI/#login/&goto=https://platform.fiesta-iot.eu/portalui
+        profileUrl: https://platform.fiesta-iot.eu/openam/XUI/#profile/details
+        logoutUrl: https://platform.fiesta-iot.eu/openam/json/sessions/?_action=logout
+    metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
+        jmx.enabled: true
+        graphite:
+            enabled: false
+            host: localhost
+            port: 2003
+            prefix: PortalUI
+        prometheus:
+            enabled: false
+            endpoint: /prometheusMetrics
+        logs: # Reports Dropwizard metrics in the logs
+            enabled: false
+            reportFrequency: 60 # in seconds
+    logging:
+        logstash: # Forward logs to logstash over a socket, used by LoggingConfiguration
+            enabled: false
+            host: localhost
+            port: 5000
+            queueSize: 512

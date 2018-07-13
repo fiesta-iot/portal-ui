@@ -1,0 +1,29 @@
+{
+  "generator-jbooter": {
+    "jbooterVersion": "1.12.1",
+    "baseName": "PortalUI",
+    "packageName": "eu.fiestaiot.portal.ui",
+    "packageFolder": "eu/fiestaiot/portal/ui",
+    "serverPort": "8080",
+    "authenticationType": "session",
+    "hibernateCache": "no",
+    "clusteredHttpSession": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "buildTool": "maven",
+    "enableSocialSignIn": false,
+    "rememberMeKey": "e5e5c3cb1d02596c21b431c9b9376a0df169a700",
+    "useSass": false,
+    "applicationType": "monolith",
+    "testFrameworks": [
+      "cucumber",
+      "protractor"
+    ],
+    "jhiPrefix": "jhi",
+    "enableTranslation": false
+  }
+}

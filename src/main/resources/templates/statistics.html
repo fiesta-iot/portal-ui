@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title th:text="${menu}">FIESTA IoT</title>
+
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+    <!-- jvectormap -->
+    <link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="content/css/mainstyle.css">
+    <link rel="stylesheet" href="content/css/skins/_all-skins.min.css">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Google Font -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+
+    <style>
+<!--table
+	{mso-displayed-decimal-separator:"\.";
+	mso-displayed-thousand-separator:"\,";}
+@page
+	{margin:.75in .7in .75in .7in;
+	mso-header-margin:.3in;
+	mso-footer-margin:.3in;}
+.style0
+	{mso-number-format:General;
+	text-align:general;
+	vertical-align:bottom;
+	white-space:nowrap;
+	mso-rotate:0;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Calibri, sans-serif;
+	mso-font-charset:0;
+	border:none;
+	mso-protection:locked visible;
+	mso-style-name:Normal;
+	mso-style-id:0;}
+td
+	{mso-style-parent:style0;
+	padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Calibri, sans-serif;
+	mso-font-charset:0;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:bottom;
+	border:none;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	mso-protection:locked visible;
+	white-space:nowrap;
+	mso-rotate:0;}
+.xl66
+	{mso-style-parent:style0;
+	border-top:.5pt solid windowtext;
+	border-right:none;
+	border-bottom:none;
+	border-left:.5pt solid windowtext;
+	background:#5B9BD5;
+	mso-pattern:black none;}
+.xl67
+	{mso-style-parent:style0;
+	vertical-align:top;
+	border-top:none;
+	border-right:.5pt solid windowtext;
+	border-bottom:none;
+	border-left:none;
+	background:#5B9BD5;
+	mso-pattern:black none;}
+.xl68
+	{mso-style-parent:style0;
+	color:white;
+	font-family:Calibri;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	border-top:none;
+	border-right:none;
+	border-bottom:none;
+	border-left:.5pt solid windowtext;
+	background:#5B9BD5;
+	mso-pattern:black none;}
+.xl69
+	{mso-style-parent:style0;
+	color:white;
+	font-family:Calibri;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	border:.5pt solid windowtext;
+	background:#5B9BD5;
+	mso-pattern:black none;}
+.xl70
+	{mso-style-parent:style0;
+	color:white;
+	font-family:Calibri;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	vertical-align:top;
+	border-top:.5pt solid windowtext;
+	border-right:.5pt solid windowtext;
+	border-bottom:none;
+	border-left:none;
+	background:#5B9BD5;
+	mso-pattern:black none;}
+.xl71
+	{mso-style-parent:style0;
+	color:white;
+	font-family:Calibri;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	border-top:.5pt solid windowtext;
+	border-right:none;
+	border-bottom:none;
+	border-left:.5pt solid windowtext;
+	background:#5B9BD5;
+	mso-pattern:black none;}
+.xl72
+	{mso-style-parent:style0;
+	color:white;
+	font-family:Calibri;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	border-top:none;
+	border-right:.5pt solid windowtext;
+	border-bottom:.5pt solid windowtext;
+	border-left:none;
+	background:#5B9BD5;
+	mso-pattern:black none;}
+.xl73
+	{mso-style-parent:style0;
+	color:white;
+	font-family:Calibri;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	border-top:none;
+	border-right:none;
+	border-bottom:.5pt solid windowtext;
+	border-left:.5pt solid windowtext;
+	background:#5B9BD5;
+	mso-pattern:black none;}
+.xl74
+	{mso-style-parent:style0;
+	color:white;
+	font-family:Calibri;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	vertical-align:top;
+	border-top:none;
+	border-right:.5pt solid windowtext;
+	border-bottom:.5pt solid windowtext;
+	border-left:none;
+	background:#5B9BD5;
+	mso-pattern:black none;}
+.xl75
+	{mso-style-parent:style0;
+	color:white;
+	font-family:Calibri;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	border-top:.5pt solid windowtext;
+	border-right:.5pt solid windowtext;
+	border-bottom:none;
+	border-left:none;
+	background:#5B9BD5;
+	mso-pattern:black none;}
+.xl76
+	{mso-style-parent:style0;
+	color:white;
+	font-family:Calibri;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	border-top:none;
+	border-right:.5pt solid windowtext;
+	border-bottom:none;
+	border-left:none;
+	background:#5B9BD5;
+	mso-pattern:black none;}
+.xl77
+	{mso-style-parent:style0;
+	text-align:center;
+	border:.5pt solid windowtext;}
+.xl78
+	{mso-style-parent:style0;
+	border:.5pt solid windowtext;}
+.xl79
+	{mso-style-parent:style0;
+	color:#4472C4;
+	font-family:Calibri;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	text-align:center;
+	border:.5pt solid windowtext;}
+.xl80
+	{mso-style-parent:style0;
+	color:white;
+	font-weight:700;
+	font-family:Calibri;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	border-top:.5pt solid windowtext;
+	border-right:none;
+	border-bottom:none;
+	border-left:none;
+	background:#5B9BD5;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl81
+	{mso-style-parent:style0;
+	color:white;
+	font-weight:700;
+	font-family:Calibri;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	border-top:none;
+	border-right:none;
+	border-bottom:.5pt solid windowtext;
+	border-left:none;
+	background:#5B9BD5;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl82
+	{mso-style-parent:style0;
+	color:white;
+	font-weight:700;
+	font-family:Calibri;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	border-top:.5pt solid windowtext;
+	border-right:.5pt solid windowtext;
+	border-bottom:none;
+	border-left:.5pt solid windowtext;
+	background:#5B9BD5;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl83
+	{mso-style-parent:style0;
+	color:white;
+	font-weight:700;
+	font-family:Calibri;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	border-top:.5pt solid windowtext;
+	border-right:.5pt solid windowtext;
+	border-bottom:none;
+	border-left:none;
+	background:#5B9BD5;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl84
+	{mso-style-parent:style0;
+	color:white;
+	font-weight:700;
+	font-family:Calibri;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	border-top:none;
+	border-right:.5pt solid windowtext;
+	border-bottom:.5pt solid windowtext;
+	border-left:.5pt solid windowtext;
+	background:#5B9BD5;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl85
+	{mso-style-parent:style0;
+	color:white;
+	font-weight:700;
+	font-family:Calibri;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	border-top:none;
+	border-right:.5pt solid windowtext;
+	border-bottom:.5pt solid windowtext;
+	border-left:none;
+	background:#5B9BD5;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl86
+	{mso-style-parent:style0;
+	color:white;
+	font-weight:700;
+	font-family:Calibri;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	border-top:.5pt solid windowtext;
+	border-right:none;
+	border-bottom:none;
+	border-left:.5pt solid windowtext;
+	background:#5B9BD5;
+	mso-pattern:black none;}
+.xl87
+	{mso-style-parent:style0;
+	color:white;
+	font-weight:700;
+	font-family:Calibri;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	border:.5pt solid windowtext;
+	background:#5B9BD5;
+	mso-pattern:black none;}
+.xl88
+	{mso-style-parent:style0;
+	color:white;
+	font-weight:700;
+	font-family:Calibri;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	border-top:none;
+	border-right:.5pt solid windowtext;
+	border-bottom:.5pt solid windowtext;
+	border-left:none;
+	background:#5B9BD5;
+	mso-pattern:black none;}
+.xl89
+	{mso-style-parent:style0;
+	color:white;
+	font-family:Calibri;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	background:#70AD47;
+	mso-pattern:black none;}
+.xl90
+	{mso-style-parent:style0;
+	color:white;
+	font-family:Calibri;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	text-align:center;
+	background:#70AD47;
+	mso-pattern:black none;}
+-->
+</style>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div>
+
+
+
+    <!-- Content Wrapper. Contains page content -->
+    <div>
+
+
+            <section class="content">
+                <div class="row" style="max-width:100%;">
+
+                        <!-- AREA CHART -->
+                        <div class="box box-primary">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Reasonings Statistic</h3>
+
+
+                            </div>
+                            <div class="box-body">
+
+                                <div class="progress-group">
+                                    <span class="progress-text">Used Rules</span>
+                                    <div class="progress sm">
+                                        <div class="progress-bar progress-bar-green" style="width: 100%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="progress-group">
+                                    <span class="progress-text">Created Rules</span>
+                                    <div class="progress sm">
+                                        <div class="progress-bar" style="width: 100%;background-color:#c1c7d1"></div>
+                                    </div>
+                                </div>
+
+
+                                <div class="chart">
+                                    <canvas id="barChart" style="height:350px"></canvas>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                        <!-- /.box -->
+                </div>
+
+                <div clas="row" style="max-width:100%;">
+
+
+
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Sensors Statistic</h3>
+
+                        </div>
+                        <div class="box-body">
+
+                            <canvas id="areaChart" style="width:100%;"></canvas>
+
+                        </div>
+                        <!-- /.box-body -->
+
+                </div>
+                <!-- /.row -->
+
+                <div class="row">
+
+
+                    <table border=0 cellpadding=0 cellspacing=0 width=1036 style='border-collapse:
+ collapse;width:100%'>
+                        <col width=53 style='width:53pt'>
+                        <col width=75 style='mso-width-source:userset;mso-width-alt:3200;width:75pt'>
+                        <col width=53 style='width:53pt'>
+                        <col width=81 style='mso-width-source:userset;mso-width-alt:3456;width:81pt'>
+                        <col width=88 span=2 style='mso-width-source:userset;mso-width-alt:3754;
+ width:88pt'>
+                        <col width=84 style='mso-width-source:userset;mso-width-alt:3584;width:84pt'>
+                        <col width=53 span=2 style='width:53pt'>
+                        <col width=89 style='mso-width-source:userset;mso-width-alt:3797;width:89pt'>
+                        <col width=63 style='mso-width-source:userset;mso-width-alt:2688;width:63pt'>
+                        <col width=71 style='mso-width-source:userset;mso-width-alt:3029;width:71pt'>
+                        <col width=79 style='mso-width-source:userset;mso-width-alt:3370;width:79pt'>
+                        <col width=53 span=2 style='width:53pt'>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 width=53 style='height:14.0pt;width:53pt'></td>
+                            <td width=75 style='width:75pt'></td>
+                            <td width=53 style='width:53pt'></td>
+                            <td width=81 style='width:81pt'></td>
+                            <td width=88 style='width:88pt'></td>
+                            <td width=88 style='width:88pt'></td>
+                            <td width=84 style='width:84pt'></td>
+                            <td width=53 style='width:53pt'></td>
+                            <td width=53 style='width:53pt'></td>
+                            <td width=89 style='width:89pt'></td>
+                            <td width=63 style='width:63pt'></td>
+                            <td width=71 style='width:71pt'></td>
+                            <td width=79 style='width:79pt'></td>
+                            <td width=53 style='width:53pt'></td>
+                            <td width=53 style='width:53pt'></td>
+                        </tr>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td class=xl66>&nbsp;</td>
+                            <td class=xl70>domains</td>
+                            <td rowspan=2 class=xl82 width=81 style='border-bottom:.5pt solid black;
+  width:81pt'>smart cities</td>
+                            <td rowspan=2 class=xl82 width=88 style='border-bottom:.5pt solid black;
+  width:88pt'>smart buildings</td>
+                            <td rowspan=2 class=xl82 width=88 style='border-bottom:.5pt solid black;
+  width:88pt'>crowd-sourcing</td>
+                            <td rowspan=2 class=xl80 width=84 style='border-bottom:.5pt solid black;
+  width:84pt'>environmental</td>
+                            <td rowspan=2 class=xl82 width=53 style='border-bottom:.5pt solid black;
+  width:53pt'>maritime</td>
+                            <td rowspan=2 class=xl82 width=53 style='border-bottom:.5pt solid black;
+  width:53pt'>energy</td>
+                            <td rowspan=2 class=xl82 width=89 style='border-bottom:.5pt solid black;
+  width:89pt'>home automation</td>
+                            <td rowspan=2 class=xl82 width=63 style='border-bottom:.5pt solid black;
+  width:63pt'>agriculture</td>
+                            <td rowspan=2 class=xl82 width=71 style='border-bottom:.5pt solid black;
+  width:71pt'>data centers</td>
+                            <td rowspan=2 class=xl83 width=79 style='border-bottom:.5pt solid black;
+  width:79pt'>Wireless Networks</td>
+                            <td rowspan=2></td>
+                            <td rowspan=2></td>
+                        </tr>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td class=xl73>testbeds</td>
+                            <td class=xl74>&nbsp;</td>
+                        </tr>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td colspan=2 class=xl71 style='border-right:.5pt solid black'>SmartSantander</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td colspan=2 class=xl68 style='border-right:.5pt solid black'>SmartICS</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td colspan=2 class=xl68 style='border-right:.5pt solid black'>SoundCity</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'></td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td colspan=2 class=xl68 style='border-right:.5pt solid black'>KETI</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td colspan=2 class=xl68 style='border-right:.5pt solid black'>ADREAM</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td colspan=2 class=xl68 style='border-right:.5pt solid black'>NITOS</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td colspan=2 class=xl68 style='border-right:.5pt solid black'>EXTEND</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td colspan=2 class=xl68 style='border-right:.5pt solid black'>FINE</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td colspan=2 class=xl68 style='border-right:.5pt solid black'>RealDC</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td colspan=2 class=xl73 style='border-right:.5pt solid black'>Tera4Agri</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 colspan=2 style='height:14.0pt;mso-ignore:colspan'></td>
+                            <td class=xl89>Total</td>
+                            <td class=xl90>3</td>
+                            <td class=xl90>5</td>
+                            <td class=xl90>2</td>
+                            <td class=xl90>9</td>
+                            <td class=xl90>1</td>
+                            <td class=xl90>5</td>
+                            <td class=xl90>2</td>
+                            <td class=xl90>1</td>
+                            <td class=xl90>1</td>
+                            <td class=xl90>3</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 colspan=15 style='height:14.0pt;mso-ignore:colspan'></td>
+                        </tr>
+                        <tr height=15 style='mso-height-source:userset;height:15.0pt'>
+                            <td height=15 style='height:15.0pt'></td>
+                            <td class=xl66>&nbsp;</td>
+                            <td class=xl70>Testbeds</td>
+                            <td rowspan=2 class=xl86 style='border-right:.5pt solid black;border-bottom:
+  .5pt solid black'>SmartSantander</td>
+                            <td rowspan=2 class=xl86 style='border-right:.5pt solid black;border-bottom:
+  .5pt solid black'>SmartICS</td>
+                            <td rowspan=2 class=xl86 style='border-right:.5pt solid black;border-bottom:
+  .5pt solid black'>SoundCity</td>
+                            <td rowspan=2 class=xl86 style='border-right:.5pt solid black;border-bottom:
+  .5pt solid black'>KETI</td>
+                            <td rowspan=2 class=xl86 style='border-right:.5pt solid black;border-bottom:
+  .5pt solid black'>ADREAM</td>
+                            <td rowspan=2 class=xl86 style='border-right:.5pt solid black;border-bottom:
+  .5pt solid black'>NITOS</td>
+                            <td rowspan=2 class=xl86 style='border-right:.5pt solid black;border-bottom:
+  .5pt solid black'>EXTEND</td>
+                            <td rowspan=2 class=xl86 style='border-right:.5pt solid black;border-bottom:
+  .5pt solid black'>FINE</td>
+                            <td rowspan=2 class=xl86 style='border-right:.5pt solid black;border-bottom:
+  .5pt solid black'>RealDC</td>
+                            <td rowspan=2 class=xl87>Tera4Agri</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+                        <tr height=15 style='mso-height-source:userset;height:15.0pt'>
+                            <td height=15 style='height:15.0pt'></td>
+                            <td class=xl68>Experiments</td>
+                            <td class=xl67>&nbsp;</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td class=xl69>DataQuest</td>
+                            <td class=xl78 style='border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td class=xl69 style='border-top:none'>DATE</td>
+                            <td class=xl78 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td class=xl69 style='border-top:none'>CREDIT</td>
+                            <td class=xl78 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td class=xl69 style='border-top:none'>Talk2Fiesta</td>
+                            <td class=xl78 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td class=xl69 style='border-top:none'>SPIAM</td>
+                            <td class=xl78 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td class=xl69 style='border-top:none'>PilotThings</td>
+                            <td class=xl78 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>x</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>x</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>x</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td class=xl69 style='border-top:none'>FineTune</td>
+                            <td class=xl78 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td class=xl69 style='border-top:none'>SmartPedestrian</td>
+                            <td class=xl78 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td class=xl69 style='border-top:none'>SmartComfort</td>
+                            <td class=xl78 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td class=xl69 style='border-top:none'>KaaS_SCL</td>
+                            <td class=xl78 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td class=xl69 style='border-top:none'>SpyIoT</td>
+                            <td class=xl78 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td class=xl69 style='border-top:none'>RedEvents</td>
+                            <td class=xl78 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td class=xl69 style='border-top:none'>FM2I</td>
+                            <td class=xl78 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td class=xl69 style='border-top:none'>Parknow</td>
+                            <td class=xl78 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td class=xl69 style='border-top:none'>DC-IoT</td>
+                            <td class=xl78 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td class=xl69 style='border-top:none'>ENERGY-IoT</td>
+                            <td class=xl78 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td class=xl69 style='border-top:none'>BeSmart</td>
+                            <td class=xl78 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td class=xl69 style='border-top:none'>2CENTs</td>
+                            <td class=xl78 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td class=xl69 style='border-top:none'>SURF</td>
+                            <td class=xl78 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+
+
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td class=xl69 style='border-top:none'>B-Model</td>
+                            <td class=xl78 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+
+
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td class=xl69 style='border-top:none'>DDSP-GW</td>
+                            <td class=xl78 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>X</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td class=xl69 style='border-top:none'>VIRTUS</td>
+                            <td class=xl78 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+
+
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td class=xl69 style='border-top:none'>Stream Quality Analyzer</td>
+                            <td class=xl78 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>X</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 style='height:14.0pt'></td>
+                            <td class=xl69 style='border-top:none'>Agrolytics</td>
+                            <td class=xl78 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl79 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+                            <td class=xl77 style='border-top:none;border-left:none'>X</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+
+
+
+                        <tr height=14 style='height:14.0pt'>
+                            <td height=14 colspan=2 style='height:14.0pt;mso-ignore:colspan'></td>
+                            <td class=xl89>Total</td>
+                            <td class=xl90>17</td>
+                            <td class=xl90>10</td>
+                            <td class=xl90>5</td>
+                            <td class=xl90>12</td>
+                            <td class=xl90>5</td>
+                            <td class=xl90>5</td>
+                            <td class=xl90>4</td>
+                            <td class=xl90>5</td>
+                            <td class=xl90>2</td>
+                            <td class=xl90>4</td>
+                            <td colspan=2 style='mso-ignore:colspan'></td>
+                        </tr>
+                    </table>
+                </div>
+
+            </section>
+
+
+    </div>
+
+
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 3 -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="bower_components/fastclick/lib/fastclick.js"></script>
+<!-- mainstyle App -->
+<script src="content/js/mainstyle.min.js"></script>
+<!-- Sparkline -->
+<script src="bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+<!-- jvectormap  -->
+<script src="bower_components/jvectormap/jquery-jvectormap.js"></script>
+<!--<script src="bower_components/jvectormap/jquery-jvectormap-world-mill-en.js"></script>-->
+<!-- SlimScroll -->
+<script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- ChartJS -->
+<script src="bower_components/chart.js/Chart.js"></script>
+<!-- mainstyle dashboard demo (This is only for demo purposes) -->
+<!--<script src="content/js/pages/dashboard2.js"></script>-->
+<!-- mainstyle for demo purposes -->
+<script src="content/js/demo.js"></script>
+
+
+<script  th:inline="javascript">
+    $(function () {
+     $.ajax({
+       url:'api/statistic/reasoning',
+       type:'GET',
+       success: function(data){
+
+        if(data != null || data != 'undefined') {
+
+          var reasoningStatistic = data;
+        var areaChartData = {
+      labels  : reasoningStatistic.created.day,
+      datasets: [
+        {
+          label               : 'Created',
+          fillColor           : 'rgba(210, 214, 222, 1)',
+          strokeColor         : 'rgba(210, 214, 222, 1)',
+          pointColor          : 'rgba(210, 214, 222, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(220,220,220,1)',
+          data                : reasoningStatistic.created.data
+        },
+        {
+          label               : 'Used',
+          fillColor           : 'rgba(60,141,188,0.9)',
+          strokeColor         : 'rgba(60,141,188,0.8)',
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : reasoningStatistic.used.data
+        }
+      ]
+    }
+
+
+
+      //-------------
+    //- BAR CHART -
+    //-------------
+    var barChartCanvas                   = $('#barChart').get(0).getContext('2d')
+    var barChart                         = new Chart(barChartCanvas)
+    var barChartData                     = areaChartData
+    barChartData.datasets[1].fillColor   = '#00a65a'
+    barChartData.datasets[1].strokeColor = '#00a65a'
+    barChartData.datasets[1].pointColor  = '#00a65a'
+    var barChartOptions                  = {
+      //Boolean - Whether the scale should start at zero, or an order of magnitude down from the lowest value
+      scaleBeginAtZero        : true,
+      //Boolean - Whether grid lines are shown across the chart
+      scaleShowGridLines      : true,
+      //String - Colour of the grid lines
+      scaleGridLineColor      : 'rgba(0,0,0,.05)',
+      //Number - Width of the grid lines
+      scaleGridLineWidth      : 1,
+      //Boolean - Whether to show horizontal lines (except X axis)
+      scaleShowHorizontalLines: true,
+      //Boolean - Whether to show vertical lines (except Y axis)
+      scaleShowVerticalLines  : true,
+      //Boolean - If there is a stroke on each bar
+      barShowStroke           : true,
+      //Number - Pixel width of the bar stroke
+      barStrokeWidth          : 2,
+      //Number - Spacing between each of the X value sets
+      barValueSpacing         : 5,
+      //Number - Spacing between data sets within X values
+      barDatasetSpacing       : 1,
+      //String - A legend template
+      legendTemplate          : '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<datasets.length; i++){%><li><span style="background-color:<%=datasets[i].fillColor%>"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>',
+      //Boolean - whether to make the chart responsive
+      responsive              : true,
+      maintainAspectRatio     : true
+    }
+
+    barChartOptions.datasetFill = false
+    barChart.Bar(barChartData, barChartOptions)
+        }
+
+    }
+
+    });
+
+    });
+</script>
+
+<script th:inline="javascript">
+     $(function () {
+
+
+    $.ajax({
+       url:'api/statistic/sensor',
+       type:'GET',
+       success: function(data){
+
+          if(data != null || data != 'undefined') {
+
+             var sensorStatistic = data;
+                //--------------
+    //- AREA CHART -
+    //--------------
+
+    // Get context with jQuery - using jQuery's .get() method.
+    var areaChartCanvas = $('#areaChart').get(0).getContext('2d')
+    // This will get the first returned node in the jQuery collection.
+    var areaChart       = new Chart(areaChartCanvas)
+
+    var areaChartData = {
+      labels  : sensorStatistic.keys,
+
+      datasets: [
+        {
+          label               : 'Sensor',
+           fillColor           : 'rgba(60,141,188,0.9)',
+          strokeColor         : 'rgba(60,141,188,0.8)',
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : sensorStatistic.data
+        },
+
+      ]
+    }
+
+    var areaChartOptions = {
+      //Boolean - If we should show the scale at all
+      showScale               : true,
+      //Boolean - Whether grid lines are shown across the chart
+      scaleShowGridLines      : false,
+      //String - Colour of the grid lines
+      scaleGridLineColor      : 'rgba(0,0,0,.05)',
+      //Number - Width of the grid lines
+      scaleGridLineWidth      : 1,
+      //Boolean - Whether to show horizontal lines (except X axis)
+      scaleShowHorizontalLines: true,
+      //Boolean - Whether to show vertical lines (except Y axis)
+      scaleShowVerticalLines  : true,
+      //Boolean - Whether the line is curved between points
+      bezierCurve             : true,
+      //Number - Tension of the bezier curve between points
+      bezierCurveTension      : 0.3,
+      //Boolean - Whether to show a dot for each point
+      pointDot                : false,
+      //Number - Radius of each point dot in pixels
+      pointDotRadius          : 4,
+      //Number - Pixel width of point dot stroke
+      pointDotStrokeWidth     : 1,
+      //Number - amount extra to add to the radius to cater for hit detection outside the drawn point
+      pointHitDetectionRadius : 20,
+      //Boolean - Whether to show a stroke for datasets
+      datasetStroke           : true,
+      //Number - Pixel width of dataset stroke
+      datasetStrokeWidth      : 2,
+      //Boolean - Whether to fill the dataset with a color
+      datasetFill             : true,
+      //String - A legend template
+      legendTemplate          : '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<datasets.length; i++){%><li><span style="background-color:<%=datasets[i].lineColor%>"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>',
+      //Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
+      maintainAspectRatio     : true,
+      //Boolean - whether to make the chart responsive to window resizing
+      responsive              : true
+    }
+
+    //Create the line chart
+    areaChart.Line(areaChartData, areaChartOptions)
+
+          }
+
+       }
+     });
+
+
+     });
+</script>
+
+
+
+
+</body>
+</html>
